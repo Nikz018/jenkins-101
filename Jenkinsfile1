@@ -18,13 +18,7 @@ triggers {
                 '''
             }
         }
-    stage ('Check-Git-Secrets') {
-      steps {
-        sh 'rm trufflehog || true'
-        sh 'docker run gesellix/trufflehog --json https://github.com/Nikz018/jenkins-101.git > trufflehog'
-        sh 'cat trufflehog'
-      }
-    }
+   
         stage('Test') {
             steps {
                 echo "Testing.."
