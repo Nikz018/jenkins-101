@@ -13,6 +13,8 @@ triggers {
                 echo "Building.."
                 sh '''
                 echo "doing build stuff this morning.."
+                cd myapp
+                pip install requirements.txt
                 '''
             }
         }
@@ -21,6 +23,9 @@ triggers {
                 echo "Testing.."
                 sh '''
                 echo "doing test stuff.."
+                cd myapp
+                python3 hellp.py
+                python3 hello.py --name= deep
                 '''
             }
         }
