@@ -24,7 +24,7 @@ triggers {
                 sh '''
                 echo "doing test stuff.."
                 cd myapp
-                python3 hellp.py
+                python3 hello.py
                 python3 hello.py --name= deep
                 '''
             }
